@@ -4,66 +4,194 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Learn about QuickFreeTools, a collection of free and easy-to-use online tools.">
-  <title>About Us | QuickFreeTools</title>
+  <meta name="description" content="Learn about QuickFreeTools, our mission, free online utilities, and commitment to simple and accessible digital tools.">
+  <meta name="theme-color" content="#0b1120">
+  <title>About Us | QuickFreeTools - Free Online Tools</title>
   <style>
     * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
       background: #0b1120;
-      color: #e5e7eb;
+      color: #e2e8f0;
       line-height: 1.8;
     }
-    header {
+    a { color: #60a5fa; text-decoration: none; }
+    a:hover { color: #93c5fd; }
+    .header {
+      border-bottom: 1px solid #253149;
+      background: #0b1120;
+      padding: 18px 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .logo {
+      color: #fff;
+      font-size: 23px;
+      font-weight: bold;
+      letter-spacing: -.5px;
+    }
+    nav { display: flex; gap: 20px; flex-wrap: wrap; }
+    nav a { color: #cbd5e1; font-size: 14px; }
+    .hero {
+      text-align: center;
+      padding: 75px 20px 65px;
+      background: linear-gradient(135deg, #101c35, #101827 65%, #132b4d);
+      border-bottom: 1px solid #253149;
+    }
+    .tag {
+      display: inline-block;
+      color: #93c5fd;
+      background: #172b49;
+      border: 1px solid #28466e;
+      padding: 5px 13px;
+      border-radius: 30px;
+      font-size: 13px;
+    }
+    h1 { color: #fff; font-size: clamp(34px, 5vw, 48px); line-height: 1.2; margin: 20px 0; }
+    .hero p { max-width: 690px; margin: auto; color: #bdc9dc; font-size: 17px; }
+    main { max-width: 1000px; margin: auto; padding: 45px 22px 65px; }
+    section { margin-bottom: 42px; }
+    h2 { color: #fff; font-size: 26px; line-height: 1.35; margin-bottom: 14px; }
+    p { color: #b9c5d7; margin: 0 0 15px; }
+    .tool-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      margin-top: 22px;
+    }
+    .tool {
       padding: 22px;
-      text-align: center;
-      border-bottom: 1px solid #263247;
+      border-radius: 14px;
+      border: 1px solid #2b3951;
+      background: #111c2e;
     }
-    header a { color: #60a5fa; text-decoration: none; }
-    main {
-      max-width: 800px;
-      margin: 45px auto;
-      padding: 28px;
-    }
-    h1, h2 { color: #ffffff; }
-    h1 { line-height: 1.3; }
-    p { color: #cbd5e1; }
-    .back { color: #60a5fa; }
-    footer {
-      text-align: center;
+    .tool .symbol { font-size: 28px; }
+    .tool h3 { color: #fff; margin: 8px 0; font-size: 18px; }
+    .tool p { font-size: 14px; margin-bottom: 0; }
+    .values {
       padding: 25px;
-      border-top: 1px solid #263247;
+      border: 1px solid #2b3951;
+      border-radius: 14px;
+      background: #111c2e;
     }
-    footer a { color: #93c5fd; margin: 0 8px; }
+    .values ul { padding-left: 22px; color: #b9c5d7; }
+    .values li { margin: 9px 0; }
+    .cta {
+      padding: 28px;
+      border: 1px solid #28466e;
+      border-radius: 14px;
+      background: #122541;
+      text-align: center;
+    }
+    .cta h2 { margin-top: 0; }
+    .footer {
+      border-top: 1px solid #253149;
+      padding: 28px 20px;
+      text-align: center;
+      background: #080e19;
+    }
+    .footer p { font-size: 13px; margin-top: 12px; }
+    .footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; }
+    @media (max-width: 600px) {
+      .header { padding: 16px 20px; }
+      nav { gap: 13px; }
+      .hero { padding: 52px 20px; }
+      main { padding: 35px 18px 45px; }
+      h2 { font-size: 23px; }
+    }
   </style>
 </head>
 <body>
-  <header>
-    <a href="index.html"><strong>QuickFreeTools</strong></a>
+  <header class="header">
+    <a class="logo" href="index.html">QuickFreeTools</a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </nav>
   </header>
 
+  <div class="hero">
+    <span class="tag">ABOUT QUICKFREETOOLS</span>
+    <h1>Simple Tools for Everyday Tasks</h1>
+    <p>Our goal is to make common digital tasks easier with straightforward, accessible online tools that people can use without complicated software.</p>
+  </div>
+
   <main>
-    <h1>About QuickFreeTools</h1>
+    <section>
+      <h2>Who We Are</h2>
+      <p>QuickFreeTools is an online platform designed to bring useful everyday utilities together in one convenient place. We believe that simple tasks should not require complicated applications, lengthy setup processes, or unnecessary steps.</p>
+      <p>Whether you need to count words in a document, resize a picture, or reduce an image's file size, QuickFreeTools aims to help you complete the task through a clear and easy-to-use interface.</p>
+      <p>We are continuously working to improve the experience, make our tools easier to understand, and explore additional utilities that may be useful to our visitors.</p>
+    </section>
 
-    <p>Welcome to QuickFreeTools, a website created to make everyday online tasks simple and convenient.</p>
+    <section>
+      <h2>What We Offer</h2>
+      <p>QuickFreeTools currently provides the following tools. Each is designed for a specific everyday task.</p>
+      <div class="tool-grid">
+        <article class="tool">
+          <div class="symbol" aria-hidden="true">📝</div>
+          <h3>Word Counter</h3>
+          <p>Count words and characters in your text. It can be useful when preparing assignments, writing articles, creating social media posts, or checking text length.</p>
+        </article>
+        <article class="tool">
+          <div class="symbol" aria-hidden="true">📐</div>
+          <h3>Image Resizer</h3>
+          <p>Adjust an image's dimensions to suit your needs. Resizing can help prepare pictures for websites, documents, profiles, and other digital uses.</p>
+        </article>
+        <article class="tool">
+          <div class="symbol" aria-hidden="true">🖼️</div>
+          <h3>Image Compressor</h3>
+          <p>Reduce image file size when you need a smaller file for sharing, uploading, or storing. The resulting size and visual quality can vary by image and settings.</p>
+        </article>
+      </div>
+    </section>
 
-    <p>Our goal is to provide easy-to-use online tools that help users complete common tasks without complicated software or unnecessary steps.</p>
+    <section>
+      <h2>Our Mission</h2>
+      <p>Our mission is to make useful online tools easy to find and simple to use. We want visitors to spend less time figuring out software and more time getting their tasks done.</p>
+      <p>We aim to build a practical collection of utilities that works across different screen sizes and is accessible to people using a range of devices.</p>
+    </section>
 
-    <h2>Our Tools</h2>
-    <p>QuickFreeTools currently offers a Word Counter, Image Resizer, and Image Compressor. We aim to make these tools accessible and straightforward to use.</p>
+    <section>
+      <h2>What Matters to Us</h2>
+      <div class="values">
+        <ul>
+          <li><strong>Ease of use:</strong> We aim for clear layouts and straightforward steps.</li>
+          <li><strong>Accessibility:</strong> We want our website to be usable on desktop computers, laptops, tablets, and mobile screens.</li>
+          <li><strong>Practical usefulness:</strong> We focus on tools that help with common digital tasks.</li>
+          <li><strong>Ongoing improvement:</strong> We welcome feedback that helps us identify problems and improve our tools.</li>
+          <li><strong>Transparency:</strong> We aim to explain our website practices clearly through our policies and contact information.</li>
+        </ul>
+      </div>
+    </section>
 
-    <h2>Our Mission</h2>
-    <p>Our mission is to provide useful, accessible, and reliable online tools with a simple user experience. We will continue working to improve the website and its tools.</p>
+    <section>
+      <h2>Our Commitment to Improvement</h2>
+      <p>We understand that a useful website needs more than a good design. Tools should also behave as expected, instructions should be understandable, and visitors should be able to find important information easily.</p>
+      <p>We will continue reviewing the website and considering improvements. If you notice a problem or have a suggestion for a future tool, we encourage you to contact us.</p>
+    </section>
 
-    <p><a class="back" href="index.html">← Back to Home</a></p>
+    <section class="cta">
+      <h2>Have a Question or Suggestion?</h2>
+      <p>Your feedback can help us make QuickFreeTools better. Visit our contact page to get in touch.</p>
+      <a href="contact.html">Visit Contact Page →</a>
+    </section>
   </main>
 
-  <footer>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    <a href="privacy.html">Privacy Policy</a>
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </div>
+    <p>© 2026 QuickFreeTools. All rights reserved.</p>
   </footer>
 </body>
 </html>
