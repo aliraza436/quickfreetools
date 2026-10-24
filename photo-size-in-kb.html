@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Photo Size in KB Converter - Free Online Image Size Reducer | QuickFreeTools</title>
+
+<meta name="description" content="Reduce photo size to 20KB, 50KB, 100KB or 200KB online. Free image size reducer with custom KB limits. No upload required.">
+
+<link rel="canonical" href="https://quickfreetools.github.io/quickfreetools/photo-size-in-kb.html">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Photo Size in KB Converter - QuickFreeTools">
+<meta property="og:description" content="Reduce image file size to your target KB online. Free, fast and private.">
+<meta property="og:url" content="https://quickfreetools.github.io/quickfreetools/photo-size-in-kb.html">
+
+<meta name="theme-color" content="#070b16">
+
+<style>
+:root{
+--bg:#070b16;
+--panel:#101829;
+--panel2:#151f35;
+--line:#293954;
+--text:#f3f6ff;
+--muted:#a2aec5;
+--blue:#638bff;
+--purple:#875cff;
+--green:#73e6b2;
+}
+
+*{box-sizing:border-box}
+
+body{
+margin:0;
+background:var(--bg);
+color:var(--text);
+font-family:Inter,system-ui,-apple-system,Arial,sans-serif;
+line-height:1.6;
+}
+
+a{color:inherit;text-decoration:none}
+
+.container{
+width:min(1100px,92%);
+margin:auto;
+}
+
+/* NAVIGATION */
+
+nav{
+border-bottom:1px solid var(--line);
+background:#070b16;
+}
+
+.navbar{
+min-height:75px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px;
+}
+
+.logo{
+font-size:21px;
+font-weight:850;
+letter-spacing:-.7px;
+}
+
+.logo span{
+color:#8cb0ff;
+}
+
+.navlinks{
+display:flex;
+gap:22px;
+font-size:14px;
+color:var(--muted);
+}
+
+/* HERO */
+
+.hero{
+text-align:center;
+padding:65px 15px 45px;
+background:radial-gradient(
+ellipse at top,
+rgba(99,139,255,.13),
+transparent 65%
+);
+}
+
+.badge{
+display:inline-block;
+border:1px solid #344563;
+border-radius:30px;
+padding:7px 16px;
+color:#a7bcff;
+font-size:12px;
+letter-spacing:1px;
+}
+
+h1{
+font-size:clamp(32px,5vw,56px);
+line-height:1.15;
+letter-spacing:-2px;
+margin:22px 0;
+}
+
+.gradient{
+background:linear-gradient(100deg,#8cb0ff,#b18aff,#66e0ef);
+-webkit-background-clip:text;
+background-clip:text;
+color:transparent;
+}
+
+.hero p{
+color:var(--muted);
+max-width:650px;
+margin:auto;
+}
+
+/* TOOL */
+
+.toolbox{
+background:linear-gradient(145deg,#121d31,#0d1525);
+border:1px solid var(--line);
+border-radius:22px;
+padding:30px;
+margin:30px auto 60px;
+max-width:850px;
+}
+
+.dropzone{
+border:2px dashed #40577d;
+background:#0c1628;
+border-radius:18px;
+text-align:center;
+padding:45px 20px;
+cursor:pointer;
+transition:.2s;
+}
+
+.dropzone:hover,
+.dropzone.dragover{
+border-color:var(--blue);
+background:#14213a;
+}
+
+.uploadicon{
+font-size:42px;
+margin-bottom:12px;
+}
+
+.dropzone h2{
+font-size:20px;
+margin:5px 0;
+}
+
+.dropzone p{
+font-size:13px;
+color:var(--muted);
+}
+
+input[type=file]{display:none}
+
+.btn{
+border:0;
+background:linear-gradient(135deg,var(--blue),var(--purple));
+color:white;
+border-radius:12px;
+padding:13px 22px;
+font-weight:750;
+font-size:14px;
+cursor:pointer;
+transition:.2s;
+}
+
+.btn:hover{
+filter:brightness(1.12);
+}
+
+.btn:disabled{
+opacity:.5;
+cursor:not-allowed;
+}
+
+.btn.secondary{
+background:#1a2740;
+border:1px solid #344563;
+}
+
+.controls{
+display:none;
+margin-top:30px;
+}
+
+.controls.active{display:block}
+
+.preview{
+text-align:center;
+margin-bottom:25px;
+}
+
+.preview img{
+max-width:100%;
+max-height:300px;
+border-radius:12px;
+border:1px solid var(--line);
+}
+
+.info{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-top:15px;
+}
+
+.infobox{
+background:#151f35;
+padding:12px 20px;
+border:1px solid var(--line);
+border-radius:12px;
+text-align:center;
+min-width:130px;
+}
+
+.infobox strong{
+display:block;
+color:#8cb0ff;
+font-size:20px;
+}
+
+.infobox span{
+font-size:12px;
+color:var(--muted);
+}
+
+.sectiontitle{
+font-size:17px;
+margin-bottom:12px;
+font-weight:750;
+}
+
+.presets{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:10px;
+margin-bottom:20px;
+}
+
+.preset{
+background:#18243a;
+border:1px solid #344563;
+color:white;
+padding:13px;
+border-radius:10px;
+cursor:pointer;
+}
+
+.preset.active{
+border-color:#8cb0ff;
+background:#283e68;
+}
+
+.fields{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+margin-bottom:25px;
+}
+
+label{
+display:block;
+font-size:13px;
+color:var(--muted);
+margin-bottom:7px;
+}
+
+input[type=number],
+select{
+width:100%;
+background:#0d1627;
+color:white;
+border:1px solid #344766;
+border-radius:10px;
+padding:13px;
+font-size:14px;
+}
+
+.actions{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+}
+
+.status{
+margin-top:20px;
+padding:15px;
+border-radius:12px;
+background:#111c30;
+color:#a9c5ff;
+display:none;
+overflow-wrap:anywhere;
+}
+
+.status.show{display:block}
+
+.result{
+display:none;
+margin-top:25px;
+padding:22px;
+background:#101f28;
+border:1px solid #315a52;
+border-radius:15px;
+text-align:center;
+}
+
+.result.active{display:block}
+
+.result h3{
+color:var(--green);
+margin-top:0;
+}
+
+.result img{
+max-width:100%;
+max-height:250px;
+border-radius:10px;
+margin-bottom:15px;
+}
+
+/* CONTENT */
+
+.content{
+max-width:850px;
+margin:60px auto;
+}
+
+.content h2{
+font-size:26px;
+margin-top:35px;
+}
+
+.content p,
+.content li{
+color:var(--muted);
+font-size:15px;
+}
+
+.content li{margin-bottom:9px}
+
+.faq{
+background:var(--panel);
+border:1px solid var(--line);
+border-radius:12px;
+padding:20px;
+margin:15px 0;
+}
+
+.faq h3{
+margin-top:0;
+font-size:16px;
+}
+
+footer{
+border-top:1px solid var(--line);
+padding:30px 15px;
+text-align:center;
+color:var(--muted);
+font-size:13px;
+}
+
+footer a{
+margin:0 10px;
+color:#a8b4ff;
+}
+
+@media(max-width:600px){
+.navlinks{gap:12px;font-size:12px}
+.logo{font-size:17px}
+.hero{padding:45px 10px 30px}
+.toolbox{padding:18px}
+.presets{grid-template-columns:repeat(2,1fr)}
+.fields{grid-template-columns:1fr}
+.actions{flex-direction:column}
+.actions .btn{width:100%}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="container navbar">
+<a class="logo" href="index.html">✳ Quick<span>Free</span>Tools</a>
+
+<div class="navlinks">
+<a href="index.html">Home</a>
+<a href="index.html#tools">All Tools</a>
+<a href="about.html">About</a>
+</div>
+</div>
+</nav>
+
+<header class="hero">
+<div class="badge">FREE ONLINE IMAGE TOOL</div>
+
+<h1>Photo Size in <span class="gradient">KB Converter</span></h1>
+
+<p>
+Reduce image size to 20KB, 50KB, 100KB, 200KB or a custom target.
+Fast, free and private — your photos stay in your browser.
+</p>
+</header>
+
+<main class="container">
+
+<section class="toolbox" aria-label="Photo size converter">
+
+<div class="dropzone" id="dropzone" role="button" tabindex="0" aria-label="Choose an image">
+<div class="uploadicon">📁</div>
+<h2>Upload Your Photo</h2>
+<p>Click to browse or drag and drop an image here</p>
+<p>Supports JPG, PNG and WebP</p>
+
+<button class="btn" type="button" id="chooseBtn">Choose Image</button>
+</div>
+
+<input type="file" id="fileInput" accept="image/jpeg,image/png,image/webp">
+
+<div class="controls" id="controls">
+
+<div class="preview">
+<img id="originalPreview" alt="Original uploaded image preview">
+
+<div class="info">
+<div class="infobox">
+<strong id="originalSize">0 KB</strong>
+<span>Original Size</span>
+</div>
+
+<div class="infobox">
+<strong id="dimensions">0 × 0</strong>
+<span>Dimensions</span>
+</div>
+</div>
+</div>
+
+<h3 class="sectiontitle">Choose Target File Size</h3>
+
+<div class="presets">
+<button class="preset" data-size="20">20 KB</button>
+<button class="preset active" data-size="50">50 KB</button>
+<button class="preset" data-size="100">100 KB</button>
+<button class="preset" data-size="200">200 KB</button>
+</div>
+
+<div class="fields">
+<div>
+<label for="targetKB">Custom Target Size (KB)</label>
+<input type="number" id="targetKB" value="50" min="1" max="10000">
+</div>
+
+<div>
+<label for="format">Output Format</label>
+<select id="format">
+<option value="image/jpeg">JPG</option>
+<option value="image/webp">WebP</option>
+<option value="image/png">PNG</option>
+</select>
+</div>
+</div>
+
+<div class="actions">
+<button class="btn" id="compressBtn">Reduce Image Size</button>
+<button class="btn secondary" id="resetBtn">Choose Another Image</button>
+</div>
+
+<div class="status" id="status" role="status" aria-live="polite"></div>
+
+<div class="result" id="result">
+<h3>✓ Your Image Is Ready</h3>
+
+<img id="resultPreview" alt="Reduced image preview">
+
+<div class="info">
+<div class="infobox">
+<strong id="newSize">0 KB</strong>
+<span>New Size</span>
+</div>
+
+<div class="infobox">
+<strong id="saving">0%</strong>
+<span>Size Reduction</span>
+</div>
+</div>
+
+<p id="resultNote"></p>
+
+<button class="btn" id="downloadBtn">Download Image</button>
+</div>
+
+</div>
+</section>
+
+<section class="content">
+
+<h2>How to Reduce Photo Size in KB</h2>
+
+<ol>
+<li>Upload your JPG, PNG or WebP image.</li>
+<li>Select a target size such as 20KB, 50KB, 100KB or 200KB.</li>
+<li>Choose the output image format.</li>
+<li>Click "Reduce Image Size".</li>
+<li>Download your optimized image.</li>
+</ol>
+
+<h2>Free Online Photo Size Reducer</h2>
+
+<p>
+QuickFreeTools helps you reduce image file sizes directly in your browser.
+Whether you need a photo under 50KB for an online application or a smaller
+image for sharing, this tool automatically adjusts compression and image
+dimensions to work toward your selected file size.
+</p>
+
+<p>
+Your images are processed locally using your browser's Canvas API.
+They are not uploaded to our servers.
+</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+<h3>Can I reduce an image to 20KB?</h3>
+<p>
+Yes, the tool attempts to compress your image to 20KB or less.
+Very detailed images may require smaller dimensions or reduced quality.
+</p>
+</div>
+
+<div class="faq">
+<h3>Can I reduce photo size without losing quality?</h3>
+<p>
+Some compression may affect image quality.
+The tool attempts to preserve as much detail as possible while meeting
+your chosen file size.
+</p>
+</div>
+
+<div class="faq">
+<h3>Are my photos uploaded to a server?</h3>
+<p>
+No. Image processing happens directly inside your browser.
+</p>
+</div>
+
+<div class="faq">
+<h3>Does this tool work on mobile devices?</h3>
+<p>
+Yes. The tool is designed for modern browsers on mobile phones,
+tablets, laptops and desktop computers.
+</p>
+</div>
+
+</section>
+
+</main>
+
+<footer>
+<div>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="privacy-policy.html">Privacy Policy</a>
+<a href="terms.html">Terms</a>
+</div>
+
+<p>© 2026 QuickFreeTools. Free Online Tools for Everyone.</p>
+</footer>
+
+<script>
+"use strict";
+
+const $ = id => document.getElementById(id);
+
+let sourceImage = null;
+let sourceFile = null;
+let sourceURL = null;
+let resultURL = null;
+let resultBlob = null;
+
+const fileInput = $("fileInput");
+const dropzone = $("dropzone");
+const controls = $("controls");
+const statusBox = $("status");
+const resultBox = $("result");
+
+function showStatus(message){
+  statusBox.textContent = message;
+  statusBox.classList.add("show");
+}
+
+function clearResult(){
+  resultBlob = null;
+
+  if(resultURL){
+    URL.revokeObjectURL(resultURL);
+    resultURL = null;
+  }
+
+  $("resultPreview").removeAttribute("src");
+  resultBox.classList.remove("active");
+}
+
+function resetTool(){
+  clearResult();
+
+  if(sourceURL){
+    URL.revokeObjectURL(sourceURL);
+    sourceURL = null;
+  }
+
+  sourceImage = null;
+  sourceFile = null;
+  fileInput.value = "";
+
+  $("originalPreview").removeAttribute("src");
+  controls.classList.remove("active");
+  statusBox.classList.remove("show");
+}
+
+function formatKB(bytes){
+  return (bytes / 1024).toFixed(2) + " KB";
+}
+
+function loadFile(file){
+
+  if(!file) return;
+
+  const allowed = [
+    "image/jpeg",
+    "image/png",
+    "image/webp"
+  ];
+
+  if(!allowed.includes(file.type)){
+    alert("Please choose a JPG, PNG or WebP image.");
+    return;
+  }
+
+  resetTool();
+
+  sourceFile = file;
+  sourceURL = URL.createObjectURL(file);
+
+  const img = new Image();
+
+  img.onload = function(){
+
+    sourceImage = img;
+
+    $("originalPreview").src = sourceURL;
+    $("originalSize").textContent = formatKB(file.size);
+
+    $("dimensions").textContent =
+      img.naturalWidth + " × " + img.naturalHeight;
+
+    controls.classList.add("active");
+
+    controls.scrollIntoView({
+      behavior:"smooth",
+      block:"start"
+    });
+  };
+
+  img.onerror = function(){
+    resetTool();
+    alert("Unable to read this image.");
+  };
+
+  img.src = sourceURL;
+}
+
+fileInput.addEventListener("change", e=>{
+  loadFile(e.target.files[0]);
+});
+
+$("chooseBtn").addEventListener("click", e=>{
+  e.stopPropagation();
+  fileInput.click();
+});
+
+dropzone.addEventListener("click", ()=>{
+  fileInput.click();
+});
+
+dropzone.addEventListener("keydown", e=>{
+  if(e.key==="Enter" || e.key===" "){
+    e.preventDefault();
+    fileInput.click();
+  }
+});
+
+dropzone.addEventListener("dragover", e=>{
+  e.preventDefault();
+  dropzone.classList.add("dragover");
+});
+
+dropzone.addEventListener("dragleave", ()=>{
+  dropzone.classList.remove("dragover");
+});
+
+dropzone.addEventListener("drop", e=>{
+  e.preventDefault();
+  dropzone.classList.remove("dragover");
+  loadFile(e.dataTransfer.files[0]);
+});
+
+document.querySelectorAll(".preset").forEach(btn=>{
+  btn.addEventListener("click", ()=>{
+
+    document.querySelectorAll(".preset").forEach(b=>{
+      b.classList.remove("active");
+    });
+
+    btn.classList.add("active");
+
+    $("targetKB").value = btn.dataset.size;
+  });
+});
+
+$("targetKB").addEventListener("input", ()=>{
+  document.querySelectorAll(".preset").forEach(b=>{
+    b.classList.toggle(
+      "active",
+      Number(b.dataset.size)===Number($("targetKB").value)
+    );
+  });
+});
+
+function canvasToBlob(canvas,type,quality){
+
+  return new Promise((resolve,reject)=>{
+
+    canvas.toBlob(blob=>{
+
+      if(blob){
+        resolve(blob);
+      }else{
+        reject(new Error("Image conversion failed."));
+      }
+
+    },type,quality);
+
+  });
+}
+
+async function compressImage(){
+
+  if(!sourceImage || !sourceFile){
+    showStatus("Please upload an image first.");
+    return;
+  }
+
+  const targetKB = Number($("targetKB").value);
+
+  if(!Number.isFinite(targetKB) ||
+     targetKB < 1 ||
+     targetKB > 10000){
+
+    showStatus("Enter a target between 1KB and 10000KB.");
+    return;
+  }
+
+  const targetBytes = targetKB * 1024;
+  const format = $("format").value;
+
+  const button = $("compressBtn");
+
+  button.disabled = true;
+  clearResult();
+
+  showStatus("Processing your image...");
+
+  try{
+
+    let width = sourceImage.naturalWidth;
+    let height = sourceImage.naturalHeight;
+
+    const maxPixels = 16000000;
+
+    if(width*height > maxPixels){
+
+      const scale = Math.sqrt(maxPixels/(width*height));
+
+      width = Math.max(1,Math.floor(width*scale));
+      height = Math.max(1,Math.floor(height*scale));
+    }
+
+    let bestBlob = null;
+
+    for(let attempt=0;attempt<18;attempt++){
+
+      const canvas = document.createElement("canvas");
+
+      canvas.width = Math.max(1,Math.round(width));
+      canvas.height = Math.max(1,Math.round(height));
+
+      const ctx = canvas.getContext("2d");
+
+      if(!ctx){
+        throw new Error("Canvas is not supported.");
+      }
+
+      if(format==="image/jpeg"){
+        ctx.fillStyle="#ffffff";
+        ctx.fillRect(0,0,canvas.width,canvas.height);
+      }
+
+      ctx.drawImage(
+        sourceImage,
+        0,0,
+        canvas.width,
+        canvas.height
+      );
+
+      if(format==="image/png"){
+
+        const blob = await canvasToBlob(
+          canvas,
+          "image/png"
+        );
+
+        if(!bestBlob || blob.size<bestBlob.size){
+          bestBlob=blob;
+        }
+
+        if(blob.size<=targetBytes) break;
+
+      }else{
+
+        let low=.05;
+        let high=.95;
+
+        for(let i=0;i<9;i++){
+
+          const quality=(low+high)/2;
+
+          const blob=await canvasToBlob(
+            canvas,
+            format,
+            quality
+          );
+
+          if(!bestBlob || blob.size<bestBlob.size){
+            bestBlob=blob;
+          }
+
+          if(blob.size>targetBytes){
+            high=quality;
+          }else{
+            low=quality;
+          }
+        }
+
+        const finalBlob=await canvasToBlob(
+          canvas,
+          format,
+          low
+        );
+
+        if(finalBlob.size<=targetBytes){
+
+          bestBlob=finalBlob;
+          break;
+        }
+
+      }
+
+      width=Math.max(1,Math.floor(width*.85));
+      height=Math.max(1,Math.floor(height*.85));
+
+      if(width===1 && height===1){
+        break;
+      }
+    }
+
+    if(!bestBlob){
+      throw new Error("Could not compress image.");
+    }
+
+    resultBlob=bestBlob;
+    resultURL=URL.createObjectURL(bestBlob);
+
+    $("resultPreview").src=resultURL;
+    $("newSize").textContent=formatKB(bestBlob.size);
+
+    const reduction =
+      (1-bestBlob.size/sourceFile.size)*100;
+
+    $("saving").textContent=
+      reduction>0 ? reduction.toFixed(1)+"%" : "0%";
+
+    if(bestBlob.size<=targetBytes){
+
+      $("resultNote").textContent=
+        "Success! Your image is within the selected target size.";
+
+    }else{
+
+      $("resultNote").textContent=
+        "The image was reduced, but the selected target could not be reached.";
+
+    }
+
+    resultBox.classList.add("active");
+
+    showStatus("Image processing completed.");
+
+    resultBox.scrollIntoView({
+      behavior:"smooth",
+      block:"start"
+    });
+
+  }catch(error){
+
+    showStatus(
+      error.message || "Something went wrong."
+    );
+
+  }finally{
+
+    button.disabled=false;
+
+  }
+}
+
+$("compressBtn").addEventListener("click",compressImage);
+
+$("resetBtn").addEventListener("click",resetTool);
+
+$("downloadBtn").addEventListener("click",()=>{
+
+  if(!resultBlob || !resultURL) return;
+
+  const format=$("format").value;
+
+  const extension =
+    format==="image/png" ? "png" :
+    format==="image/webp" ? "webp" : "jpg";
+
+  const a=document.createElement("a");
+
+  a.href=resultURL;
+
+  a.download=
+    "quickfreetools-"+$("targetKB").value+"kb."+extension;
+
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+});
+
+window.addEventListener("pagehide",()=>{
+
+  if(sourceURL) URL.revokeObjectURL(sourceURL);
+  if(resultURL) URL.revokeObjectURL(resultURL);
+
+});
+</script>
+
+</body>
+</html>
