@@ -1,0 +1,304 @@
+/* ==========================================
+   QUICKFREETOOLS 2.0
+   DARK PREMIUM EDITION
+   ========================================== */
+
+:root {
+  --bg: #070b16;
+  --panel: #101829;
+  --panel2: #151f35;
+  --line: #263550;
+  --text: #f3f6ff;
+  --muted: #a2aec5;
+  --blue: #638bff;
+  --cyan: #45d9ed;
+  --green: #73e6b2;
+}
+
+/* GLOBAL */
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: #638bff;
+  color: #ffffff;
+}
+
+/* NAVIGATION */
+
+nav {
+  background: rgba(7, 11, 22, 0.92);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(18px);
+}
+
+.logo {
+  font-weight: 900;
+  letter-spacing: -0.8px;
+}
+
+.logoicon {
+  background: linear-gradient(
+    135deg,
+    #638bff,
+    #9b5cff
+  );
+  box-shadow: 0 4px 22px rgba(99, 139, 255, 0.25);
+}
+
+.pill {
+  background: rgba(115, 230, 178, 0.08);
+  border: 1px solid rgba(115, 230, 178, 0.25);
+  color: #a6f5d1;
+}
+
+/* HERO SECTION */
+
+.hero {
+  background:
+    radial-gradient(
+      ellipse at 50% 0%,
+      rgba(99, 139, 255, 0.12),
+      transparent 65%
+    );
+}
+
+.hero::before {
+  background: rgba(99, 139, 255, 0.15);
+}
+
+.eyebrow {
+  border-color: rgba(99, 139, 255, 0.25);
+  background: rgba(99, 139, 255, 0.07);
+  color: #c2d1ff;
+}
+
+.gradient {
+  background: linear-gradient(
+    100deg,
+    #8cb0ff,
+    #b18aff,
+    #66e0ef
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* SEARCH */
+
+.searchbox {
+  max-width: 620px;
+}
+
+.searchbox input {
+  background: #111a2d;
+  border: 1px solid #30405e;
+  border-radius: 14px;
+  color: white;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+.searchbox input:focus {
+  border-color: #638bff;
+  box-shadow: 0 0 0 3px rgba(99,139,255,0.15);
+}
+
+/* BUTTONS */
+
+.btn {
+  background: linear-gradient(
+    135deg,
+    #638bff,
+    #875cff
+  );
+
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(99,139,255,0.18);
+}
+
+.btn:hover {
+  filter: brightness(1.12);
+  transform: translateY(-2px);
+}
+
+.btn.secondary {
+  background: #18243a;
+  border: 1px solid #344563;
+  box-shadow: none;
+}
+
+/* TOOLS GRID */
+
+.grid {
+  gap: 22px;
+}
+
+.card {
+  background: linear-gradient(
+    145deg,
+    #121d31,
+    #0d1525
+  );
+
+  border: 1px solid #293954;
+  border-radius: 20px;
+  padding: 26px;
+
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.card:hover {
+  border-color: #638bff;
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+}
+
+.toolicon {
+  background: linear-gradient(
+    135deg,
+    #24395f,
+    #20254c
+  );
+
+  border: 1px solid #344d78;
+  border-radius: 15px;
+}
+
+.tag {
+  background: rgba(99,139,255,0.12);
+  color: #b8ccff;
+  border: 1px solid rgba(99,139,255,0.18);
+}
+
+/* TOOL WORKSPACE */
+
+.toolpanel {
+  background: linear-gradient(
+    145deg,
+    #111b2e,
+    #0c1424
+  );
+
+  border: 1px solid #30415e;
+  border-radius: 22px;
+
+  box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+}
+
+.metric {
+  background: #111b2d;
+  border: 1px solid #30415a;
+  border-radius: 14px;
+}
+
+.metric strong {
+  color: #83a5ff;
+}
+
+/* INPUT FIELDS */
+
+textarea,
+.option input,
+.option select {
+  background: #0d1627;
+  color: #ffffff;
+  border: 1px solid #344766;
+  border-radius: 12px;
+}
+
+textarea:focus,
+.option input:focus,
+.option select:focus {
+  outline: none;
+  border-color: #638bff;
+  box-shadow: 0 0 0 3px rgba(99,139,255,0.12);
+}
+
+/* UPLOAD AREA */
+
+.dropzone {
+  background: #0c1628;
+  border: 2px dashed #40577d;
+  border-radius: 18px;
+  transition: 0.25s ease;
+}
+
+.dropzone:hover {
+  border-color: #638bff;
+  background: #121f36;
+}
+
+/* FOOTER */
+
+footer {
+  border-top: 1px solid var(--line);
+  background: #080e1c;
+  color: var(--muted);
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 900px) {
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0,1fr));
+  }
+
+  .hero {
+    padding: 65px 20px;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 50px 16px;
+  }
+
+  .card {
+    padding: 22px;
+  }
+
+  .toolpanel {
+    padding: 20px;
+  }
+
+  .searchbox {
+    flex-direction: column;
+  }
+
+  .searchbox input,
+  .searchbox button {
+    width: 100%;
+  }
+
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+
+}
